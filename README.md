@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Website Legitimacy Checker is a Python script that uses WHOIS and DNS tracking information to help users determine if a website is legitimate or not. The script fetches WHOIS information for a given website and DNS tracking information from the DNS Tracking API, providing a preview of the WHOIS information to aid in the legitimacy check.
+The Website Legitimacy Checker is a Python script that uses WHOIS and DNS tracking information to help users determine if a website is legitimate or not. The script fetches WHOIS information for a given website and DNS tracking information from the DNS Tracking API, providing a preview of the WHOIS information to aid in the legitimacy check..
 
 ## Features
 
