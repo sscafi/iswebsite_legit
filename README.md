@@ -33,6 +33,8 @@ The Website Legitimacy Checker is a Python script that uses WHOIS and DNS tracki
 ## Usage
 
 ### Requirements
+## Updates - 
+- I will be making more adjustments to this to make it even better for users , thank you for the feedback !
 
 - Python 3.x
 - `whois` library (install with `pip install whois`)
