@@ -5,7 +5,7 @@ A comprehensive domain security analysis tool that helps identify potentially su
 ## 🚀 Quick Start for Users
 
 **1. Download:**
-- [Download DomainChecker-Package.zip](#) (https://github.com/yourusername/yourrepo/releases/download/v1.0/DomainChecker-Package.zip)
+- [Download DomainChecker-Package.zip](https://github.com/yourusername/yourrepo/releases/download/v1.0/DomainChecker-Package.zip)
 
 **2. Extract:**
 - Unzip the file to any folder (e.g., your Desktop)
