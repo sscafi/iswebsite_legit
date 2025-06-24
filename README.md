@@ -2,6 +2,24 @@
 
 A comprehensive domain security analysis tool that helps identify potentially suspicious or fraudulent websites. Built with Python and Tkinter, featuring advanced security checks, caching, and a modern user interface.
 
+## 🚀 Quick Start for Users
+
+**1. Download:**
+- [Download DomainChecker-Package.zip](#) (link to your zipped file)
+
+**2. Extract:**
+- Unzip the file to any folder (e.g., your Desktop)
+
+**3. Install:**
+- Open the extracted `Distribution` folder
+- **Right-click** `install.bat` and select **"Run as administrator"**
+- Follow the prompts (a desktop icon will be created)
+
+**4. Use:**
+- Double-click the "Domain Checker" desktop icon to launch the app
+
+---
+
 ## 🚀 Features
 
 ### Core Security Checks
@@ -33,11 +51,13 @@ A comprehensive domain security analysis tool that helps identify potentially su
 
 ## 📋 Requirements
 
-- Python 3.7+
-- Windows 10/11, macOS, or Linux
+- Windows 10/11
+- No Python installation required
 - Internet connection for API calls
 
-## 🛠️ Installation
+## 🛠️ Installation (Advanced/Developers)
+
+If you want to run from source or build your own executable, see below for advanced instructions.
 
 ### Option 1: Run from Source
 
