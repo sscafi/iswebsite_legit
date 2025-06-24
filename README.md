@@ -1,41 +1,245 @@
-# Website Legitimacy Checker
+# Domain Checker - Production Ready Security Tool
 
-======================================
+A comprehensive domain security analysis tool that helps identify potentially suspicious or fraudulent websites. Built with Python and Tkinter, featuring advanced security checks, caching, and a modern user interface.
 
-## Overview
+## 🚀 Features
 
-The Website Legitimacy Checker is a Python script that uses WHOIS and DNS tracking information to help users determine if a website is legitimate or not. The script fetches WHOIS information for a given website and DNS tracking information from the DNS Tracking API, providing a preview of the WHOIS information to aid in the legitimacy check.
+### Core Security Checks
+- **WHOIS Information**: Complete domain registration details
+- **DNS Resolution**: IP address and domain resolution status
+- **SSL Certificate Validation**: Certificate validity and expiration
+- **Domain Age Analysis**: Registration date and age calculation
+- **Suspicious Indicators**: Pattern detection and risk assessment
+- **Blacklist Checking**: Integration with AbuseIPDB
+- **Malware Detection**: VirusTotal integration
+- **Social Media Presence**: Cross-platform verification
 
-## Features
+### User Experience
+- **Modern GUI**: Clean, intuitive interface with dark/light mode
+- **Real-time Progress**: Loading indicators during checks
+- **History Management**: Track previously checked domains
+- **Export Options**: CSV and PDF export functionality
+- **Copy to Clipboard**: Easy result sharing
+- **Summary/Detailed Views**: Toggle between concise and comprehensive results
+- **Settings Panel**: Configure API keys and preferences
 
-### WHOIS Information
+### Production Features
+- **Secure Configuration**: Encrypted API key storage
+- **Comprehensive Logging**: Debug, error, and analytics logging
+- **Caching System**: Performance optimization with file and memory cache
+- **Rate Limiting**: API call management to prevent abuse
+- **Error Handling**: Graceful failure recovery
+- **Input Validation**: Robust domain format checking
 
-- Fetches WHOIS information for a given website domain
-- Provides a preview of the WHOIS information, including:
-  - Domain name
-  - Registrar
-  - Creation date
-  - Expiration date
-  - Name servers
+## 📋 Requirements
 
-### DNS Tracking Information
+- Python 3.7+
+- Windows 10/11, macOS, or Linux
+- Internet connection for API calls
 
-- Fetches DNS tracking information from the DNS Tracking API
-- Displays DNS tracking information, including:
-  - IP addresses
-  - Location
-  - Other relevant details
+## 🛠️ Installation
 
-### Legitimacy Check
+### Option 1: Run from Source
 
-- Provides a comprehensive view of the website's WHOIS and DNS tracking information to aid in determining its legitimacy
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/domain-checker.git
+   cd domain-checker
+   ```
 
-## Usage
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Requirements
-## Updates - 
-- Python 3.x
-- `whois` library (install with `pip install whois`)
-- `requests` library (install with `pip install requests`)
-- DNS Tracking API key (obtain a free API key by signing up on the DNS Tracking API website)
-- I will be making more adjustments to this to make it even better for users , thank you for the feedback !
+3. **Configure API keys** (optional but recommended):
+   ```bash
+   cp config.env.example .env
+   # Edit .env with your API keys
+   ```
+
+4. **Run the application**:
+   ```bash
+   python main.py
+   ```
+
+### Option 2: Standalone Executable
+
+1. **Build the executable**:
+   ```bash
+   python build.py
+   ```
+
+2. **Run the installer** (Windows):
+   ```bash
+   install.bat
+   ```
+
+3. **Or run directly**:
+   ```bash
+   ./dist/DomainChecker.exe
+   ```
+
+## 🔑 API Key Setup
+
+For full functionality, obtain API keys from these services:
+
+### Required APIs
+- **VirusTotal**: [Get API Key](https://www.virustotal.com/gui/join-us)
+- **AbuseIPDB**: [Get API Key](https://www.abuseipdb.com/api)
+
+### Optional APIs
+- **DNS Tracking**: Your preferred DNS tracking service
+
+### Configuration
+1. Open the application
+2. Click "Settings"
+3. Enter your API keys
+4. Click "Save"
+
+## 📖 Usage
+
+### Basic Usage
+1. **Enter Domain**: Type a domain name (e.g., `example.com`)
+2. **Check Domain**: Click "Check Domain" or press Enter
+3. **View Results**: Review the comprehensive security analysis
+4. **Export/Share**: Use export buttons or copy to clipboard
+
+### Advanced Features
+- **History**: Click on any domain in the history list to re-check
+- **View Modes**: Toggle between summary and detailed views
+- **Settings**: Configure API keys and preferences
+- **Dark Mode**: Enable in settings for better eye comfort
+
+### Understanding Results
+
+#### Risk Score (0-100)
+- **0-20**: Safe - Low risk domain
+- **21-40**: Low - Minor concerns
+- **41-60**: Medium - Moderate risk indicators
+- **61-80**: High - Multiple suspicious factors
+- **81-100**: Critical - High risk, avoid
+
+#### Key Indicators
+- **Domain Age**: Newer domains (< 30 days) are higher risk
+- **SSL Certificate**: Invalid or expired certificates increase risk
+- **Suspicious Patterns**: Unusual domain names or registrars
+- **Blacklist Status**: Presence in security databases
+- **Malware Detection**: Positive scans from antivirus engines
+
+## 🏗️ Architecture
+
+```
+domain-checker/
+├── main.py                 # Main application entry point
+├── build.py               # PyInstaller build script
+├── requirements.txt       # Python dependencies
+├── config.env.example     # Configuration template
+├── services/
+│   └── domain_checker.py  # Core domain checking logic
+├── utils/
+│   ├── config.py          # Configuration management
+│   ├── logger.py          # Logging system
+│   ├── validators.py      # Input validation
+│   └── cache.py           # Caching and rate limiting
+└── README.md              # This file
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+```bash
+# API Keys
+DNS_TRACKING_API_KEY=your_key_here
+VIRUSTOTAL_API_KEY=your_key_here
+ABUSEIPDB_API_KEY=your_key_here
+
+# Application Settings
+ENABLE_ANALYTICS=false
+ENABLE_CRASH_REPORTING=false
+DARK_MODE=false
+AUTO_UPDATE=true
+```
+
+### Settings Panel
+Access via the "Settings" button in the main interface:
+- **API Keys**: Configure external service keys
+- **Preferences**: Toggle features and appearance
+- **Dark Mode**: Switch between light and dark themes
+
+## 📊 Logging
+
+Logs are stored in `~/.domain_checker/logs/`:
+- `app.log`: General application logs
+- `errors.log`: Error and exception logs
+- `analytics.log`: Usage analytics (if enabled)
+
+## 🚀 Performance
+
+- **Caching**: Results cached for 1 hour by default
+- **Rate Limiting**: Prevents API abuse
+- **Background Processing**: Non-blocking UI during checks
+- **Memory Management**: Automatic cleanup of old cache entries
+
+## 🔒 Security
+
+- **Encrypted Storage**: API keys encrypted using Fernet
+- **Local Data**: All data stored locally, no cloud dependencies
+- **Input Sanitization**: Robust domain validation
+- **Error Handling**: Secure error messages without data leakage
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**"API key not configured"**
+- Open Settings and enter your API keys
+- Some features work without API keys
+
+**"Domain check failed"**
+- Check your internet connection
+- Verify domain format (e.g., `example.com`, not `http://example.com`)
+- Check logs in `~/.domain_checker/logs/`
+
+**"Build failed"**
+- Ensure PyInstaller is installed: `pip install pyinstaller`
+- Check Python version compatibility
+
+### Log Files
+Check log files for detailed error information:
+```bash
+# View recent errors
+tail -f ~/.domain_checker/logs/errors.log
+
+# View application logs
+tail -f ~/.domain_checker/logs/app.log
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [python-whois](https://github.com/richardpenman/whois) for WHOIS lookups
+- [VirusTotal](https://www.virustotal.com/) for malware detection
+- [AbuseIPDB](https://www.abuseipdb.com/) for blacklist checking
+- [PyInstaller](https://pyinstaller.org/) for executable packaging
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/domain-checker/issues)
+- **Documentation**: [Wiki](https://github.com/yourusername/domain-checker/wiki)
+- **Email**: support@domainchecker.com
+
+---
+
+**⚠️ Disclaimer**: This tool is for educational and security research purposes. Always verify results independently and use responsibly.
