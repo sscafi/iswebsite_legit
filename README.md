@@ -5,7 +5,7 @@ A comprehensive domain security analysis tool that helps identify potentially su
 ## 🚀 Quick Start for Users
 
 **1. Download:**
--  [DomainChecker-Package.zip](./DomainChecker-Package.zip) (20MB)
+-  when tool is finished the final product will be up 
 
 **2. Extract:**
 - Unzip the file to any folder (e.g., your Desktop)
