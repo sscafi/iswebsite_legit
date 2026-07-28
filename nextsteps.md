@@ -1,6 +1,6 @@
 # Next Steps for Domain Checker
 
-## Phase 1: Quick Wins (1-2 weeks each)
+## Phase 1: Quick Wins (1-2 weeks each) - reupload old version and rework
 
 ### 1. Cross-Platform Support
 **Goal:** Make it work on macOS and Linux, not just Windows
